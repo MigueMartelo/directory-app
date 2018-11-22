@@ -7,5 +7,5 @@ npm install
 
 For run app, please run
 ```
-npm run dev
+npm start
 ```
