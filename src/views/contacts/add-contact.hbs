@@ -1,0 +1,21 @@
+<div class="col-md-4 mx-auto">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>New Contact</h4>
+        </div>
+        <div class="card-body">
+            <form action="/contacts/new-contact" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Name of your contact" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" class="form-control" placeholder="Phone of your contact">
+                </div>
+                <div class="form-group">
+                    <textarea name="address" class="form-control" placeholder="Address of your contact"></textarea>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Save Contact</button>
+            </form>
+        </div>
+    </div>
+</div>

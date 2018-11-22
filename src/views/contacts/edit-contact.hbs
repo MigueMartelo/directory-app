@@ -1,0 +1,29 @@
+{{#each errors}}
+    <div class="alert alert-dismissible alert-danger mt-4">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{text}}
+    </div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Edit Contact</h4>
+        </div>
+        <div class="card-body">
+            <form action="/contacts/edit-contact/{{contactToEdit.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Name of your contact" value="{{contactToEdit.name}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" class="form-control" placeholder="Phone of your contact" value="{{contactToEdit.phone}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="address" class="form-control" placeholder="Address of your contact">{{contactToEdit.address}}</textarea>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Save Contact</button>
+            </form>
+        </div>
+    </div>
+</div>
